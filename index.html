@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#f9ede5]"> 
+    <div id="main">
+        <div id="nav" class="flex items-center justify-between p-3">
+            <div id="nav1" class="flex items-center gap-3">
+                <img src="./assets/Designer (1) (1).png" alt="logo" class="w-20">
+                <h1 class="text-2xl font-bold">PagePlayground</h1>
+            </div>
+            <div id="nav2" class="hidden lg:flex gap-24 text-lg font-medium">
+                <a href="#main" class="hover:text-blue-600">Home</a>
+                <a href="#pages-container" class="hover:text-blue-600">Featured</a>
+                <a href="#personalized" class="hover:text-blue-600">Personalisation</a>
+                <a href="./shop.html" class="hover:text-blue-600">Shop</a>
+            </div>
+            <a href="./signin.html">
+                <button  class= "hidden lg:flex items-center gap-1 bg-yellow-500 border rounded-xl px-2 py-1 mr-4  text-lg font-medium ">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </button>
+            </a>
+            <button id="hamburger" class="lg:hidden cursor-pointer z-50">
+                <i id="cross" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <div id="menu" class=" hidden bg-[#FEACA0] h-[100vh]  fixed inset-0 z-10">
+                <div id="nav1" class="flex items-center gap-3 m-10 justify-center ">
+                    <img src="./assets/Designer (1) (1).png" alt="logo" class="w-20">
+                    <h1 class="text-2xl font-bold">PagePlayground</h1>
+                </div>
+                <div class="h-[70%] grid place-items-center py-6">
+                    <a href="#main" class="hover:text-white text-2xl font-bold" id="home1">Home</a>
+                    <a href="#pages-container" class="hover:text-white text-2xl font-bold" id="featured1">Featured</a>
+                    <a href="#personalized" class="hover:text-white text-2xl font-bold" id="ps1">Personalisation</a>
+                    <a href="./shop.html" class="hover:text-white text-2xl font-bold" id="shop1">Shop</a>
+                    <a href="./signin.html"><button class="hover:text-white text-2xl font-bold" onclick="redirect()">Login</button></a>
+                </div>
+            </div>
+        </div>
+        <main id="home" class="mt-1 pt-5 pb-3 lg:flex justify-between bg-[#FEF7F5]">
+            <div id="tagline" class="hidden lg:block text-5xl font-bold font-ab pt-28 ml-20">
+                <h1>Elevate Your Online</h1>
+                <h1>Presence with</h1>
+                <h1 class="underline underline-offset-[12px] decoration-8 decoration-[#FFCA49] ">Dynamic Landing Pages</h1>     
+            </div>  
+            <div id="images" class="lg:block lg:mr-6 relative group">
+                <img src="" alt="" id="slide" class="w-full h-[50vh] sm:h-[81vh] lg:w-[800px]">
+                <i id="prev" class="fa-solid fa-chevron-left absolute top-[50%] text-pink-500 cursor-pointer left-4 text-2xl"></i>
+                <i id="next" class="fa-solid fa-chevron-right absolute top-[50%] text-pink-500 cursor-pointer right-4 text-2xl"></i>
+            </div>
+            <div id="tagline-small" class="lg:hidden text-4xl sm:text-5xl md:text-6xl  font-bold font-serif text-center mt-14 mb-14">
+                <h1 class="m-2 underline underline-offset-[85px] sm:underline-offset-[105px] md:underline-offset-[125px] decoration-[15px] sm:decoration-[20px] decoration-[#FFCA49] ">Elevate Your Online</h1>
+                <h1 class="m-2">Presence with</h1>
+                <h1 class="m-2">Dynamic Landing Pages</h1>                 
+            </div>      
+        </main>
+        <section id="about" class="flex flex-col items-center  lg:flex-row justify-between p-6 gap-6 bg-blue-200">
+            <div id="photo" class="lg:pl-20">
+                <img src="./assets/download (1).png" alt="" class="h-[40vh] sm:h-[50vh] lg:h-[60vh] border-2 border-black rounded-full  text-center">
+            </div>
+            
+            <div id="info" class="lg:w-[50%]">
+                <h1 class="lg:m-15 lg:mb-10 mb-5 text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[#064D94] text-center">About PagePlayground</h1>
+                <p class="text-xl lg:text-2xl font-sans mx-8">Welcome to <span>PagePlayground</span>, where we specialize in creating captivating landing pages that drive results. Our team combines creativity with cutting-edge technology to craft stunning, responsive designs that engage visitors and convert clicks into clients. Let us help you make a lasting impression online.                </p>
+            </div>            
+        </section>
+        <section id="pages-container" class="m-10 ml-16 mt-20 flex flex-col items-center">
+            <h1 class="text-5xl font-serif font-semibold text-center underline underline-offset-[12px] decoration-[10px] decoration-[#FFCA49] lg:no-underline">Featured Pages</h1>
+            <div id="pages" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14 mt-16 pl-5">
+                <div id="page1" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img1" src="./assets/image2.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[100%]">
+                    <div id="one" class="hidden">
+                        <a href="https://webdesignmastery.github.io/Discover_Worldwide_22-02-24/" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-pink-500 bg-black rounded-full py-2 px-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="page2" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img2" src="./assets/image1.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[99%] w-[99%]">
+                    <div id="two" class="hidden">
+                        <a href="https://webdesignmastery.github.io/RayalPark_25-12-23/" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-yellow-500 bg-black rounded-full py-2 px-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="page3" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img3" src="./assets/Image5.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[99%]">
+                    <div id="three" class="hidden">
+                        <a href="https://webdesignmastery.github.io/Bella_Onojie_10-04-24/" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-pink-500 bg-black rounded-full py-2 px-1"></i>                        </a>    
+                    </div>
+                </div>
+                <div id="page4" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img4" src="./assets/image3.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[99%]">
+                    <div id="four" class="hidden">
+                        <a href="https://parshu0711.github.io/Event-Management-And-Ticket-Booking-Website/home.html" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-yellow-500 bg-black rounded-full py-2 px-1"></i>                        </a>
+                    </div>
+                </div>
+                <div id="page5" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img5" src="./assets/Image4.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[99%]">
+                    <div id="five" class="hidden">
+                        <a href="https://webdesignmastery.github.io/Camp_06-04-24/#" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-pink-500 bg-black rounded-full py-2 px-1"></i>                        </a>   
+                    </div>
+                </div>
+                <div id="page6" class="rounded-xl p-[2px] h-80 relative w-[90%]">
+                    <img id="img6" src="./assets/Image6.jpeg" class="border-4 border-red-500 rounded-xl pt-[1px] h-[99%]">
+                    <div id="six" class="hidden">
+                        <a href="https://webdesignmastery.github.io/Fitclub_25-07-23/" target="_blank">
+                            <i class="fas fa-link absolute top-[44%] text-4xl left-[44%] text-yellow-500 bg-black rounded-full py-2 px-1"></i>                        </a>    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="theme" class="mt-16 bg-blue-200 pb-3">
+            <h1 class="text-3xl lg:text-5xl font-semibold text-center pt-8 m-4 font-serif">Theme Features</h1>
+            <p class="text-center text-lime-900 text-lg">The reasons why you should purchase our Landing Pages</p>
+            <div id="featured" class="flex flex-col my-10 mx-14 sm:mx-28 md:mx-40 lg:mx-48 lg:flex-row gap-14">
+                <div id="feature1" class="bg-white flex flex-col items-center rounded-xl pb-3">
+                    <div class="bg-yellow-500 m-7 h-20 w-20 rounded-lg flex items-center justify-center ">
+                        <i class="fas fa-tablet-alt text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-xl font-serif font-bold text-center">Responsive Layout</h2>
+                    <p class="font-ab m-5 text-center text-gray-600">The layout is completely responsive, it looks beautiful on every device</p>
+                </div>
+                <div id="feature2" class="bg-white flex flex-col items-center rounded-xl pb-3">
+                    <div class="bg-yellow-500 m-8 h-20 w-20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-border-style text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-xl font-serif font-bold text-center">Smooth Animations</h2>
+                    <p class="font-ab m-5 text-center text-gray-600">Websites has cool Animations, which keeps customers more engaging</p>
+                </div>
+                <div id="feature3" class="bg-white flex flex-col items-center rounded-xl pb-3">
+                    <div class="bg-yellow-500 m-8 h-20 w-20 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-chart-simple text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-xl font-serif font-bold text-center">Seo Friendly</h2>
+                    <p class="font-ab m-5 text-center text-gray-600">The theme follows all the latest web and accessibility standards to improve SEO</p>                  
+                </div>
+            </div>
+        </section>
+        <section id="personalized" class="mt-10 mb-10 text-center">
+            <div>
+                <h1 class="text-5xl font-semibold text-center pt-2  font-serif text-[#064D94]">Personalised Landing</h1>
+                <h1 class="text-5xl font-semibold text-center font-serif text-[#064D94]">Pages</h1>
+                <h3 class="text-center mt-4 font-[cursive] text-lg lg:text-xl">with <span class="font-serif font-semibold text-2xl lg:text-3xl">PagePlayground</span></h3>
+            </div>
+            <p class="text-center mx-14 mt-10 mb-6 text-xl font-medium font-ab lg:text-2xl lg:mx-40">Get personalized landing pages designed to convert visitors into customers. Our expert team creates unique, eye-catching designs tailored to your brand's needs. Maximize your online presence and drive results with our custom landing page solutions.</p>
+            <a href="./contact.html"><button class=" border-4 rounded-lg p-[0.4rem] text-lg font-medium border-black bg-yellow-500">Contact us <i class="fa-solid fa-arrow-right"></i></button> </a>           
+        </section>   
+        <section id="last" class="flex justify-between px-[2%] sm:px-[4%] md:px[9%] lg:px-[15%] mt-5 bg-blue-200 items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-medium font-serif">Upscale Your Business with PagePlayground</h1>
+                <a href="./shop.html"><button class="m-6 border-4 rounded-lg p-[0.4rem] text-lg font-medium border-black bg-gray-600 text-yellow-500">Shop Now</button></a>
+            </div>
+            <div class="py-5">
+                <img src="https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=340&amp;height=346&amp;name=cta-content-block-asset-en@2x-2.webp" alt="" class="" width="340" height="346" loading="lazy" srcset="https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=170&amp;height=173&amp;name=cta-content-block-asset-en@2x-2.webp 170w, https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=340&amp;height=346&amp;name=cta-content-block-asset-en@2x-2.webp 340w, https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=510&amp;height=519&amp;name=cta-content-block-asset-en@2x-2.webp 510w, https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=680&amp;height=692&amp;name=cta-content-block-asset-en@2x-2.webp 680w, https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=850&amp;height=865&amp;name=cta-content-block-asset-en@2x-2.webp 850w, https://www.hubspot.com/hs-fs/hubfs/cta-content-block-asset-en@2x-2.webp?width=1020&amp;height=1038&amp;name=cta-content-block-asset-en@2x-2.webp 1020w" sizes="(max-width: 340px) 100vw, 340px">
+            </div>    
+        </section>
+        <footer class="bg-[#D0BCA8] pt-10 hidden md:block">
+            <div class="flex justify-evenly pb-5">
+                <h1 class="text-3xl font-serif font-semibold">PagePlayground</h1>
+                <div >
+                    <h1 class="text-2xl font-medium pb-4">Quick Links</h1>
+                    <ul>
+                        <li><a href="#main" class="text-lg font-ab font-normal text-sky-700 p-2">Home</a></li>
+                        <li><a href="#pages-container" class="text-lg font-ab font-normal text-sky-700 p-2">Landing Pages</a></li>
+                        <li><a href="#personalized" class="text-lg font-ab font-normal text-sky-700 p-2">Personalised</a></li>
+                        <li><a href="#features" class="text-lg font-ab font-normal text-sky-700 p-2">Features</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-medium pb-4">Contact</h1>
+                    <ul>
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-phone"></i> +91-9175023434</li>
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-message"></i> omwarkad0183@gmail.com</li>
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-location-dot"></i> Maharshtra, India - 431001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gray-700 h-[1px] w-full"></div>
+            <div class="p-8 text-xl font-medium font-[cursive] text-center">
+                <p>© 2024 PagePlayground | All Rights Reserved</p>
+            </div>
+        </footer> 
+        <footer class="bg-[#D0BCA8] pt-10 md:hidden">
+            <div class="pb-5 flex flex-col">
+                <h1 class="text-2xl font-serif font-semibold text-center p-1">PagePlayground</h1>                               
+                <div>
+                    <h1 class="text-xl font-medium py-4 text-center">Contact</h1>
+                    <ul class="text-center">
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-phone"></i> +91-9175023434</li>
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-message"></i> omwarkad0183@gmail.com</li>
+                        <li class="text-lg font-ab font-normal text-sky-700 p-2"><i class="fa-solid fa-location-dot"></i> Maharshtra, India - 431001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gray-700 h-[1px] w-full"></div>
+            <div class="p-8 text-xl font-medium font-[cursive] text-center">
+                <p>© 2024 PagePlayground | All Rights Reserved</p>
+            </div>
+        </footer>                                                           
+    </div>
+
+    <script>
+        var menu = document.getElementById("menu");
+        var cross = document.getElementById("cross")
+        document.getElementById("hamburger").addEventListener("click",()=>{
+            menu.classList.toggle("hidden")
+            cross.classList.toggle("fa-xmark")
+            cross.classList.toggle("fa-bars")
+        })
+
+        var home1 = document.getElementById("home1");
+        var shop1 = document.getElementById("shop1");
+        var ps1 = document.getElementById("ps1");
+        var featured1 = document.getElementById("featured1");
+
+        featured1.addEventListener("click",()=>{
+            menu.classList.toggle("hidden")
+            cross.classList.toggle("fa-xmark")
+            cross.classList.toggle("fa-bars")
+        })
+
+        shop1.addEventListener("click",()=>{
+            menu.classList.toggle("hidden")
+            cross.classList.toggle("fa-xmark")
+            cross.classList.toggle("fa-bars")
+        })
+
+        ps1.addEventListener("click",()=>{
+            menu.classList.toggle("hidden")
+            cross.classList.toggle("fa-xmark")
+            cross.classList.toggle("fa-bars")
+        })
+
+        home1.addEventListener("click",()=>{
+            menu.classList.toggle("hidden")
+            cross.classList.toggle("fa-xmark")
+            cross.classList.toggle("fa-bars")
+        })
+
+        const redirect = ()=>{
+                menu.classList.toggle("hidden")
+                cross.classList.toggle("fa-xmark")
+                cross.classList.toggle("fa-bars")                 
+        }
+        
+
+
+
+        const slides = ["./assets/image1.jpeg","./assets/image2.jpeg","./assets/image3.jpeg"];
+        const slide = document.getElementById("slide");
+        var currentIndex = 0;
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        slide.setAttribute("src",slides[currentIndex])
+        prev.addEventListener("click",()=>{
+            if(currentIndex==0){
+                currentIndex=2;
+            }
+            else{
+                currentIndex--;
+            }
+            slide.setAttribute("src",slides[currentIndex])
+        })
+        next.addEventListener("click",()=>{
+            if(currentIndex==2){
+                currentIndex=0;
+            }
+            else{
+               currentIndex++;
+            }
+            slide.setAttribute("src",slides[currentIndex])
+        })
+
+        setInterval(()=>{
+            if(currentIndex==2){
+                currentIndex=0;
+            }
+            else{
+                currentIndex++;
+            }
+            slide.setAttribute("src",slides[currentIndex])
+        },2000);
+
+
+        
+        const one = document.getElementById("one");
+        const page1 = document.getElementById("page1");
+        const img1 = document.getElementById("img1");
+        page1.addEventListener("mouseenter",()=>{
+            one.classList.toggle("hidden");
+            img1.classList.add("opacity-40");
+        })
+        page1.addEventListener("mouseleave",()=>{
+            one.classList.toggle("hidden");
+            img1.classList.remove("opacity-40");
+        })
+
+        const two = document.getElementById("two");
+        const page2 = document.getElementById("page2");
+        const img2 = document.getElementById("img2");
+        page2.addEventListener("mouseenter",()=>{
+            two.classList.toggle("hidden");
+            img2.classList.add("opacity-40");
+        })
+        page2.addEventListener("mouseleave",()=>{
+            two.classList.toggle("hidden");
+            img2.classList.remove("opacity-40");
+        })        
+
+        const three = document.getElementById("three");
+        const page3 = document.getElementById("page3");
+        const img3 = document.getElementById("img3");
+        page3.addEventListener("mouseenter",()=>{
+            three.classList.toggle("hidden");
+            img3.classList.add("opacity-40");
+        })
+        page3.addEventListener("mouseleave",()=>{
+            three.classList.toggle("hidden");
+            img3.classList.remove("opacity-40");
+        })        
+
+        const four = document.getElementById("four");
+        const page4 = document.getElementById("page4");
+        const img4 = document.getElementById("img4");
+        page4.addEventListener("mouseenter",()=>{
+            four.classList.toggle("hidden");
+            img4.classList.add("opacity-40");
+        })
+        page4.addEventListener("mouseleave",()=>{
+            four.classList.toggle("hidden");
+            img4.classList.remove("opacity-40");
+        })        
+
+        const five = document.getElementById("five");
+        const page5 = document.getElementById("page5");
+        const img5 = document.getElementById("img5");
+        page5.addEventListener("mouseenter",()=>{
+            five.classList.toggle("hidden");
+            img5.classList.add("opacity-40");
+        })
+        page5.addEventListener("mouseleave",()=>{
+            five.classList.toggle("hidden");
+            img5.classList.remove("opacity-40");
+        })        
+
+        const six = document.getElementById("six");
+        const page6 = document.getElementById("page6");
+        const img6 = document.getElementById("img6");
+        page6.addEventListener("mouseenter",()=>{
+            six.classList.toggle("hidden");
+            img6.classList.add("opacity-40");
+        })
+        page6.addEventListener("mouseleave",()=>{
+            six.classList.toggle("hidden");
+            img6.classList.remove("opacity-40");
+        })        
+
+     </script>
+</body>
+</html>
